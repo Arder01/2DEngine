@@ -1,6 +1,4 @@
 #pragma once
-#ifndef ENGINE_H
-#define ENGINE_H
 #include "SDL.h"
 #include "SDL_image.h"
 
@@ -16,7 +14,7 @@ public:
 	}
 
 	bool Init();
-	bool Clean();
+	void Clean();
 	void Quit();
 
 	void Update();
@@ -43,4 +41,4 @@ private:
 
 };
 
-#endif ENGINE_H
+//#endif //ENGINE_H

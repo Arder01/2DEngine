@@ -1,5 +1,7 @@
 #include "Engine.h"
 #include <iostream>
+#include "TextureManager.h"
+
 
 Engine* Engine::s_Instance = nullptr;
 
@@ -24,7 +26,7 @@ bool Engine::Init()
 		return false;
 	}
 
-
+	TextureManager::GetInstance()->Load("Platform", "Assets/Platform.png");
 	return m_IsRunning = true;
 }
 
@@ -49,11 +51,17 @@ void Engine::Events()
 void Engine::Render()
 {
 	SDL_SetRenderDrawColor(m_Renderer, 123, 215, 206,150);
+	SDL_RenderClear(m_Renderer);
+	TextureManager::GetInstance()->Draw("Platform", 50, 50, 500, 500);
 	SDL_RenderPresent(m_Renderer);
 }
 
-bool Engine::Clean() {
-	return true;
+void Engine::Clean() {
+	TextureManager::GetInstance()->Clean();
+	SDL_DestroyRenderer(m_Renderer);
+	SDL_DestroyWindow(m_Window);
+	IMG_Quit();
+	SDL_Quit();
 }
 
 void Engine::Quit()

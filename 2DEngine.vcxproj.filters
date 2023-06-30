@@ -7,6 +7,9 @@
     <Filter Include="src\Core">
       <UniqueIdentifier>{e166e33b-982c-4b8f-9087-0f18c955ece6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Graphics">
+      <UniqueIdentifier>{b4c172c5-aa28-4dcd-b02d-5396a7b2b036}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -15,10 +18,12 @@
     <ClCompile Include="Main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
       <Filter>src\Core</Filter>
     </ClInclude>
+    <ClInclude Include="TextureManager.h" />
   </ItemGroup>
 </Project>

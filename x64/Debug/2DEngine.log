@@ -1,2 +1,5 @@
 ﻿  Engine.cpp
+  Main.cpp
+  TextureManager.cpp
+  Generating Code...
   2DEngine.vcxproj -> E:\2DEngine\x64\Debug\2DEngine.exe
