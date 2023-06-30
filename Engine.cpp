@@ -1,7 +1,8 @@
 #include "Engine.h"
 #include <iostream>
 #include "TextureManager.h"
-
+#include "Vector2d.h"
+#include "Transform.h"
 
 Engine* Engine::s_Instance = nullptr;
 
@@ -27,12 +28,22 @@ bool Engine::Init()
 	}
 
 	TextureManager::GetInstance()->Load("Platform", "Assets/Platform.png");
+	
+	Transform tf;
+	tf.Log("Tf: ");
+//	Vector2d v1(1, 1), v2(1, 1), v3;
+
+	//v1.Log("V1:");
+	//v3.Log("V3:");
+	//v3 = v1 + v2;
+	//v3.Log("V3 after Change: ");
 	return m_IsRunning = true;
+
 }
 
 void Engine::Update()
 {
-	SDL_Log("asdfasdf");
+	
 }
 
 void Engine::Events()
