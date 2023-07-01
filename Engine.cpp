@@ -1,8 +1,9 @@
 #include "Engine.h"
 #include <iostream>
 #include "Warrior.h"
-#include "Vector2d.h"
 #include "TextureManager.h"
+#include "Input.h"
+#include "Timer.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior * Player = nullptr;
@@ -28,8 +29,9 @@ bool Engine::Init()
 		return false;
 	} 
 
-	TextureManager::GetInstance()->Load("Player", "Assets/Death.png");
-	Player = new Warrior (new Properties("Player", 100,200,35,100));
+	TextureManager::GetInstance()->Load("Player", "Assets/Knight/_Idle.png");
+	TextureManager::GetInstance()->Load("Player_Run", "Assets/Knight/_Run.png");
+	Player = new Warrior (new Properties("Player", 100,200,120,80));
 	
 	Transform tf;
 	tf.Log("Tf: ");
@@ -44,21 +46,14 @@ bool Engine::Init()
 }
 
 void Engine::Update()
-{
-	Player->Update(0);
+{ 
+	float dt = Timer::GetInstance()->GetDeltaTime();
+	Player->Update(dt);
 }
 
 void Engine::Events()
 {
-	SDL_Event event;
-	SDL_PollEvent(&event);
-	switch (event.type)
-	{
-	case SDL_QUIT:
-		Quit();
-		break;
-
-	}
+	Input::GetInstance()->Listen();
 }
 
 void Engine::Render()

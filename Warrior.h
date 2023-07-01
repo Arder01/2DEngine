@@ -1,7 +1,7 @@
 #pragma once
 #include "Character.h"
 #include "Animation.h"
-
+#include "RigidBody.h"
 
 class Warrior: public Character
 {
@@ -14,5 +14,6 @@ public:
 
 private:
 	Animation* m_Animation;
+	RigidBody* m_RigidBody;
 };
 

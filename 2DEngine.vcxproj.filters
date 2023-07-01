@@ -22,6 +22,12 @@
     <Filter Include="src\Animation">
       <UniqueIdentifier>{c24884ae-276e-4a4a-a2f0-52f7473a6188}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Inputs">
+      <UniqueIdentifier>{a60693a6-c461-4792-9231-9621a7cbcf0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Timer">
+      <UniqueIdentifier>{8ae6e8cd-2e9b-4524-b847-528a82e9d98f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -38,6 +44,12 @@
     </ClCompile>
     <ClCompile Include="Animation.cpp">
       <Filter>src\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>src\Inputs</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>src\Timer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +79,15 @@
     </ClInclude>
     <ClInclude Include="Animation.h">
       <Filter>src\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidBody.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>src\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>src\Timer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
