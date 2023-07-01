@@ -1,10 +1,11 @@
 #include "Engine.h"
 #include <iostream>
-#include "TextureManager.h"
+#include "Warrior.h"
 #include "Vector2d.h"
-#include "Transform.h"
+#include "TextureManager.h"
 
 Engine* Engine::s_Instance = nullptr;
+Warrior * Player = nullptr;
 
 bool Engine::Init()
 {
@@ -25,9 +26,10 @@ bool Engine::Init()
 	if (m_Renderer == nullptr) {
 		SDL_Log("Failed to initialize SDL :  %s", SDL_GetError());
 		return false;
-	}
+	} 
 
-	TextureManager::GetInstance()->Load("Platform", "Assets/Platform.png");
+	TextureManager::GetInstance()->Load("Player", "Assets/Death.png");
+	Player = new Warrior (new Properties("Player", 100,200,35,100));
 	
 	Transform tf;
 	tf.Log("Tf: ");
@@ -43,7 +45,7 @@ bool Engine::Init()
 
 void Engine::Update()
 {
-	
+	Player->Update(0);
 }
 
 void Engine::Events()
@@ -63,7 +65,7 @@ void Engine::Render()
 {
 	SDL_SetRenderDrawColor(m_Renderer, 123, 215, 206,150);
 	SDL_RenderClear(m_Renderer);
-	TextureManager::GetInstance()->Draw("Platform", 50, 50, 500, 500);
+	Player->Draw();
 	SDL_RenderPresent(m_Renderer);
 }
 

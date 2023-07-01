@@ -13,6 +13,15 @@
     <Filter Include="src\Physics">
       <UniqueIdentifier>{98d9de42-45c3-4051-8e80-541b8196eeb2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Object">
+      <UniqueIdentifier>{3ed81eaa-aa3d-4506-bd53-2a128fb820dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Characters">
+      <UniqueIdentifier>{ccac7604-3491-4498-b6b2-4574e887c833}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Animation">
+      <UniqueIdentifier>{c24884ae-276e-4a4a-a2f0-52f7473a6188}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -23,6 +32,12 @@
     </ClCompile>
     <ClCompile Include="TextureManager.cpp">
       <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Warrior.cpp">
+      <Filter>src\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>src\Animation</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -37,6 +52,21 @@
     </ClInclude>
     <ClInclude Include="Transform.h">
       <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="IObject.h">
+      <Filter>src\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>src\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>src\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Warrior.h">
+      <Filter>src\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>src\Animation</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

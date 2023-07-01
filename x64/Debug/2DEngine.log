@@ -1,2 +1,4 @@
 ﻿  Engine.cpp
+E:\2DEngine\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\2DEngine\GameObject.h(14,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   2DEngine.vcxproj -> E:\2DEngine\x64\Debug\2DEngine.exe
