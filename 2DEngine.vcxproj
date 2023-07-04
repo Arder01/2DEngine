@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\Enigine content\for VS\SDL2-devel-2.28.0-VC\SDL2-2.28.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Enigine content\for VS\SDL2-devel-2.28.0-VC\SDL2-2.28.0\include;E:\2DEngine\Vendors;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>E:\Enigine content\for VS\SDL2-devel-2.28.0-VC\SDL2-2.28.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Enigine content\for VS\SDL2-devel-2.28.0-VC\SDL2-2.28.0\include;E:\2DEngine\Vendors;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,22 +137,34 @@
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MapParser.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TileLayer.cpp" />
     <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Vendors\TinyXml\tinystr.cpp" />
+    <ClCompile Include="Vendors\TinyXml\tinyxml.cpp" />
+    <ClCompile Include="Vendors\TinyXml\tinyxmlerror.cpp" />
+    <ClCompile Include="Vendors\TinyXml\tinyxmlparser.cpp" />
     <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="GameMap.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="IObject.h" />
+    <ClInclude Include="Layer.h" />
+    <ClInclude Include="MapParser.h" />
     <ClInclude Include="RigidBody.h" />
     <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TileLayer.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Vector2d.h" />
+    <ClInclude Include="Vendors\TinyXml\tinystr.h" />
+    <ClInclude Include="Vendors\TinyXml\tinyxml.h" />
     <ClInclude Include="Warrior.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

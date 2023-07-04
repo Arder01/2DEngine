@@ -1,12 +1,2 @@
-﻿  Engine.cpp
-E:\2DEngine\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\2DEngine\GameObject.h(14,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Main.cpp
-  Timer.cpp
-E:\2DEngine\Timer.cpp(11,27): warning C4244: '=': conversion from 'Uint32' to 'float', possible loss of data
-  Warrior.cpp
-E:\2DEngine\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\2DEngine\GameObject.h(14,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\2DEngine\Warrior.cpp(34,22): warning C4305: 'argument': truncation from 'double' to 'float'
-  Generating Code...
+﻿  MapParser.cpp
   2DEngine.vcxproj -> E:\2DEngine\x64\Debug\2DEngine.exe

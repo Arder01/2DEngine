@@ -1,6 +1,7 @@
 #pragma once
 #include "SDL.h"
 #include "SDL_image.h"
+#include "GameMap.h"
 
 
 #define SCREEN_WIDTH 960
@@ -10,7 +11,7 @@ class Engine
 {
 public:
 	static Engine* GetInstance() {
-		return s_Instance = (s_Instance != nullptr)? s_Instance: new Engine();
+		return s_Instance = (s_Instance != nullptr) ? s_Instance : new Engine();
 	}
 
 	bool Init();
@@ -31,9 +32,10 @@ public:
 	}
 
 private:
-	Engine(){}
+	Engine() {}
 	bool m_IsRunning;
 
+	GameMap* m_LevelMap;
 	SDL_Window* m_Window;
 	SDL_Renderer* m_Renderer;
 

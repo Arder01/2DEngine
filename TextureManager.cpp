@@ -11,7 +11,7 @@ bool TextureManager::Load(std::string id, std::string filename)
 		SDL_Log("Failed to load Texture: %s, %s", filename.c_str(), SDL_GetError());
 		return  false;
 	}
-	SDL_Texture* texture = SDL_CreateTextureFromSurface(Engine::GetInstance()->GetRenderer(),surface);
+	SDL_Texture* texture = SDL_CreateTextureFromSurface(Engine::GetInstance()->GetRenderer(), surface);
 	if (texture == nullptr)
 	{
 		SDL_Log("Failed to create texture from surface: %s, %s", filename.c_str(), SDL_GetError());
@@ -32,11 +32,18 @@ void TextureManager::Draw(std::string id, int x, int y, int width, int height, S
 
 }
 
-void TextureManager::DrawFrame(std::string id,int x,int y,int width,int height,int row,int frame,SDL_RendererFlip flip)
+void TextureManager::DrawFrame(std::string id, int x, int y, int width, int height, int row, int frame, SDL_RendererFlip flip)
 {
-	SDL_Rect srcRect = { width * frame, height * (row-1),width,height };
+	SDL_Rect srcRect = { width * frame, height * (row - 1),width,height };
 	SDL_Rect dstRect = { x, y, width, height };
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
+}
+
+void TextureManager::DrawTile(std::string tilesetID, int tileSize, int x, int y, int row, int frame, SDL_RendererFlip flip)
+{
+	SDL_Rect dstRect = { x, y, tileSize, tileSize };
+	SDL_Rect srcRect = { tileSize * frame, tileSize * (row - 1),tileSize,tileSize };
+	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[tilesetID], &srcRect, &dstRect, 0, 0, flip);
 }
 
 void TextureManager::Drop(std::string id)
@@ -47,12 +54,12 @@ void TextureManager::Drop(std::string id)
 
 
 void TextureManager::Clean()
-{	
+{
 	std::map<std::string, SDL_Texture*>::iterator it;
 	for (it = m_TextureMap.begin(); it != m_TextureMap.end(); it++)
 	{
 		SDL_DestroyTexture(it->second);
 	}
-		m_TextureMap.clear();
+	m_TextureMap.clear();
 	SDL_Log("Texture Map Cleaned");
 }

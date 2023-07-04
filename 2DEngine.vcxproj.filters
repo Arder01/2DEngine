@@ -28,6 +28,12 @@
     <Filter Include="src\Timer">
       <UniqueIdentifier>{8ae6e8cd-2e9b-4524-b847-528a82e9d98f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Map">
+      <UniqueIdentifier>{41d1857f-c353-430d-83bc-b60812d36644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Tinyxml">
+      <UniqueIdentifier>{c0b98b5c-252c-461d-b8ef-baf3e45faa25}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -50,6 +56,24 @@
     </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>src\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="TileLayer.cpp">
+      <Filter>src\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapParser.cpp">
+      <Filter>src\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendors\TinyXml\tinystr.cpp">
+      <Filter>src\Tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendors\TinyXml\tinyxml.cpp">
+      <Filter>src\Tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendors\TinyXml\tinyxmlerror.cpp">
+      <Filter>src\Tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendors\TinyXml\tinyxmlparser.cpp">
+      <Filter>src\Tinyxml</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +112,24 @@
     </ClInclude>
     <ClInclude Include="Timer.h">
       <Filter>src\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>src\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMap.h">
+      <Filter>src\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="TileLayer.h">
+      <Filter>src\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MapParser.h">
+      <Filter>src\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendors\TinyXml\tinystr.h">
+      <Filter>src\Tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendors\TinyXml\tinyxml.h">
+      <Filter>src\Tinyxml</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
