@@ -4,7 +4,7 @@ MapParser* MapParser::s_Instance = nullptr;
 
 bool MapParser::Load()
 {
-	if (!Parse("MAP", "Assets/Maps/Map.tmx"))
+	if (!Parse("Map", "Assets/Maps/Map.tmx"))
 		return false; 
 	else
 		return true;

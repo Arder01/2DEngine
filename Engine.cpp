@@ -30,12 +30,12 @@ bool Engine::Init()
 		return false;
 	}
 
-	if (MapParser::GetInstance()->Load())
+	if (!MapParser::GetInstance()->Load())
 	{
 		std::cout << "Failed to load map" << std::endl;
 	}
 
-	m_LevelMap = MapParser::GetInstance()->GetMap("MAP");
+	m_LevelMap = MapParser::GetInstance()->GetMap("Map");
 
 	TextureManager::GetInstance()->Load("Player", "Assets/Knight/_Idle.png");
 	TextureManager::GetInstance()->Load("Player_Run", "Assets/Knight/_Run.png");
