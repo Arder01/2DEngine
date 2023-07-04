@@ -30,10 +30,10 @@ void TileLayer::Render()
 				int tileRow = tileID / ts.ColCount;
 				int tileCol = tileID - tileRow * ts.ColCount - 1;
 
-				//if (tileID % ts.ColCount == 0) {
-				//	tileRow--;
-				//	tileCol = ts.ColCount - 1;
-				//}
+				if (tileID % ts.ColCount == 0) {
+					tileRow--;
+					tileCol = ts.ColCount - 1;
+				}
 				TextureManager::GetInstance()->DrawTile(ts.Name, ts.TileSize, j * ts.TileSize, i * ts.TileSize, tileRow, tileCol);
 			}
 		}

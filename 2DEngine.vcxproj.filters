@@ -34,6 +34,9 @@
     <Filter Include="src\Tinyxml">
       <UniqueIdentifier>{c0b98b5c-252c-461d-b8ef-baf3e45faa25}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Camera">
+      <UniqueIdentifier>{8d1e5d5a-1349-44d1-9d38-0b2f2754307d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -74,6 +77,9 @@
     </ClCompile>
     <ClCompile Include="Vendors\TinyXml\tinyxmlparser.cpp">
       <Filter>src\Tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>src\Camera</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +136,12 @@
     </ClInclude>
     <ClInclude Include="Vendors\TinyXml\tinyxml.h">
       <Filter>src\Tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>src\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>src\Physics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

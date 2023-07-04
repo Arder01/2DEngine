@@ -5,6 +5,7 @@
 #include "Input.h"
 #include "Timer.h"
 #include "MapParser.h"
+#include "Camera.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* Player = nullptr;
@@ -17,7 +18,9 @@ bool Engine::Init()
 		return false;
 	}
 
-	m_Window = SDL_CreateWindow("2D Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+	SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
+
+	m_Window = SDL_CreateWindow("2D Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, window_flags);
 	if (m_Window == nullptr)
 	{
 		SDL_Log("Failed to initialize SDL :  %s", SDL_GetError());
@@ -39,6 +42,7 @@ bool Engine::Init()
 
 	TextureManager::GetInstance()->Load("Player", "Assets/Knight/_Idle.png");
 	TextureManager::GetInstance()->Load("Player_Run", "Assets/Knight/_Run.png");
+	TextureManager::GetInstance()->Load("BG1", "Assets/Images/background1.png");
 	Player = new Warrior(new Properties("Player", 100, 200, 120, 80));
 
 	Transform tf;
@@ -49,6 +53,8 @@ bool Engine::Init()
 		//v3.Log("V3:");
 		//v3 = v1 + v2;
 		//v3.Log("V3 after Change: ");
+	Camera::GetInstance()->SetTarget(Player->GetOrigin());
+
 	return m_IsRunning = true;
 
 }
@@ -59,6 +65,8 @@ void Engine::Update()
 	m_LevelMap->Update();
 	Player->Update(dt);
 
+	Camera::GetInstance()->Update(dt);
+
 }
 
 
@@ -67,6 +75,7 @@ void Engine::Render()
 	SDL_SetRenderDrawColor(m_Renderer, 123, 215, 206, 150);
 	SDL_RenderClear(m_Renderer);
 
+	TextureManager::GetInstance()->Draw("BG1", 0, 0, 960, 480);
 	m_LevelMap->Render();
 	Player->Draw();
 	SDL_RenderPresent(m_Renderer);

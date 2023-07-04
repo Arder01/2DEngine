@@ -1,4 +1,25 @@
-﻿  Engine.cpp
-E:\2DEngine\GameObject.h(13,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+﻿  Camera.cpp
+E:\2DEngine\Camera.cpp(8,29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\2DEngine\Camera.cpp(9,29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\2DEngine\Camera.cpp(16,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\2DEngine\Camera.cpp(16,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Engine.cpp
 E:\2DEngine\GameObject.h(14,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\2DEngine\GameObject.h(15,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Input.cpp
+  Main.cpp
+  TextureManager.cpp
+E:\2DEngine\TextureManager.cpp(32,25): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\2DEngine\TextureManager.cpp(32,25): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\2DEngine\TextureManager.cpp(32,37): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\2DEngine\TextureManager.cpp(32,37): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\2DEngine\TextureManager.cpp(42,24): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\2DEngine\TextureManager.cpp(42,24): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\2DEngine\TextureManager.cpp(42,34): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\2DEngine\TextureManager.cpp(42,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\2DEngine\TextureManager.cpp(50,24): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\2DEngine\TextureManager.cpp(50,24): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\2DEngine\TextureManager.cpp(50,33): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\2DEngine\TextureManager.cpp(50,33): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
   2DEngine.vcxproj -> E:\2DEngine\x64\Debug\2DEngine.exe
