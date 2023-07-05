@@ -12,7 +12,7 @@ public:
 private:
 	Timer() {}
 	static Timer* s_Instance;
-	float m_DeltaTime;
-	float m_LastTime;
+	float m_DeltaTime = 0.0f;
+	float m_LastTime = 0.0f;
 };
 

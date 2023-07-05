@@ -41,8 +41,8 @@ public:
 	{
 		m_Acceleration.X = (m_Force.X + m_Friction.X) / m_Mass;
 		m_Acceleration.Y = m_Gravity+m_Force.Y/ m_Mass;
-		m_Velocity = m_Acceleration * dt;
-		m_Position = m_Velocity * dt;
+		m_Velocity = m_Acceleration*dt;
+		m_Position = m_Velocity*dt;
 	}
 private:
 	float m_Mass, m_Gravity;

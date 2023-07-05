@@ -37,6 +37,9 @@
     <Filter Include="src\Camera">
       <UniqueIdentifier>{8d1e5d5a-1349-44d1-9d38-0b2f2754307d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Collision">
+      <UniqueIdentifier>{e1c63e99-1b62-49d2-be56-b151d4739313}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -80,6 +83,9 @@
     </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>src\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionHandler.cpp">
+      <Filter>src\Collision</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +147,12 @@
       <Filter>src\Camera</Filter>
     </ClInclude>
     <ClInclude Include="Point.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionHandler.h">
+      <Filter>src\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
       <Filter>src\Physics</Filter>
     </ClInclude>
   </ItemGroup>
